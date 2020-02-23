@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fasure</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- CSS文件載入 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome5.all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- js文件載入 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- header/start -->
+    <header class="container">
+        <!-- navbar定義導覽列的基礎樣式；navbar-expand-lg導覽列的斷點為lg；navbar-light文字淺灰色 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <!-- navbar-brand以文字或圖片作為LOGO時的基本樣式 -->
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo.png" alt="logo" class="w-100">
+            </a>
+            <!-- navbar-toggler當尺寸小於992px時，導覽列會切為漢堡樣式；data-toggle="collapse"宣告使用collaose效果；data-target="#navbarNav"為觸發器，
+            指定展開選單的id名稱；aria-controls="navbarNav"定義內容無法藉由HTML結構決定的關聯關係；aria-expanded="false"表目前為關閉狀態；aria-label="Toggle navigation"螢幕閱讀器閱讀 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- navbar-toggler-icon呈現漢堡選單的三條水平線、寬度與高度樣式 -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse隱藏選單；navbar-collapse定義子選單的軸線與佔用份數，以及位於容器的中心位置 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- navbar-nav定義選單為無符號樣式、外劇與內距屬性 -->
+                <ul class="navbar-nav">
+                    <!-- active表當前頁面  -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於Fasure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">商品商城</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+                <!-- ml-auto使整組購物車選單靠右對齊 -->
+                <div class="ml-auto">
+                    <!-- my-2調整上方外劇的距離；my-sm-0在576px時上方外距值為零 -->
+                    <!-- x為調整左右；y為調整上下 -->
+                    <a href="login.html" class="btn btn-outline-secondary my-2 text-secondary my-sm-0">
+                        <i class="fas fa-sign-in-alt" class="text-secondary"></i>
+                        登入
+                    </a>
+                    <a href="cart.html" class="btn btn-outline-secondary my-2 text-secondary my-sm-0">
+                        <i class="fas fa-shopping-cart" class="text-secondary"></i>
+                        購物車
+                    </a>
+                    <a href="checkout.html" class="btn btn-outline-secondary my-2 text-secondary my-sm-0">
+                        <i class="far fa-credit-card" class="text-secondary"></i>
+                        結帳
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header/end -->
+
+    <!-- 廣告/start -->
+    <!-- container-fluid建立滿版寬度佈局 -->
+    <section class="container-fluid">
+        <div class="row">
+            <!-- carousel定義此區塊為的位置屬性為relative；slide過度動畫；data-ride="carousel"作用為廣告輪播組件會在頁面載入之後開始播放，
+            若移除時，那麼只有在點擊指標後才會開始播放 -->
+            <div id="carouselBanner" class="carousel slide" data-ride="carousel">
+                <!-- arousel-indicators使指標的圖示可呈現在中間靠下的位置 -->
+                <ol class="carousel-indicators">
+                    <!-- data-target="＃carouselBanner"為觸發器；data-slide-to輪播傳遞的索引值，從0開始計算；active起始點 -->
+                    <li data-target="＃carouselBanner" data-slide-to="0" class="active"></li>
+                    <li data-target="＃carouselBanner" data-slide-to="1"></li>
+                    <li data-target="＃carouselBanner" data-slide-to="2"></li>
+                    <li data-target="＃carouselBanner" data-slide-to="3"></li>
+                </ol>
+                <!-- carousel-inner將寬度改為100%外，透過「後代選擇器」關係使底下的圖片具有響應式 -->
+                <div class="carousel-inner">
+                    <!-- banner1 -->
+                    <!-- carousel-item使該區塊具有0.6s的過度動畫以及相關對齊屬性 此類別底下的內容預設為隱藏狀態 -->
+                    <div class="carousel-item active">
+                        <img src="./images/slide-01.jpg" alt="first slide" class="d-block w-100">
+                    </div>
+                    <!-- banner2 -->
+                    <div class="carousel-item">
+                        <img src="./images/slide-02.jpg" alt="second slide" class="d-block w-100">
+                    </div>
+                    <!-- banner3 -->
+                    <div class="carousel-item">
+                        <img src="./images/slide-03.jpg" alt="third slide" class="d-block w-100">
+                        </div>
+                    </div>
+                    <!-- banner4 -->
+                    <div class="carousel-item">
+                        <img src="./images/slide-04.jpg" alt="forth slide" class="d-block w-100">
+                    </div>
+                    <!-- 前一頁圖示 -->
+                    <!-- href="#carouselBanner"將連結位置設為觸發器名稱；carousel-control-prev定義prev按扭的範圍與滑入樣式，此範圍也表示實際觸控的範圍 -->
+                    <!-- role="button"表述此段內容為button；data-slide="prev"為carousel的控制屬性，僅能接受prev,next兩屬性值才能透過js進行左右切換的控制 -->
+                    <a href="#carouselBanner" class="carousel-control-prev" role="button" data-slide="prev">
+                        <!-- carousel-control-prev-icon呈現箭頭符號；aria-hidden="true"隱藏文字圖示的存在, 讓螢幕朗讀軟體讀不到此 span 元素 -->
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <!-- 下一頁圖示 -->
+                    <a href="#carouselBanner" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 廣告/end -->
+
+    <!-- 產品分類/start -->
+    <section class="container mt-5">
+        <div class="row">
+            <!-- 標題 -->
+            <div class="col-12 mb-2">
+                <h2>商品分類</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quidem magnam illum rem ex praesentium!</p>
+            </div>
+            <div class="col-12">
+                <div class="card-deck mt-2">
+                    <!-- 商品類別一 -->
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3 product-categories">
+                        <a href="shop.html" class="card">
+                            <img src="./images/banner-01.jpg" alt="女裝" class="card-top-img w-100">
+                            <div class="card-body bg-dark">
+                                <h4 class="card-title text-white text-center m-0 p-0">女裝</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 商品類別二 -->
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3 product-categories">
+                        <a href="shop.html" class="card">
+                            <img src="./images/banner-02.jpg" alt="男裝" class="card-top-img w-100">
+                            <div class="card-body bg-dark">
+                                <h4 class="card-title text-white text-center m-0 p-0">男裝</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 商品類別三 -->
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 p-0 mb-3 product-categories">
+                        <a href="shop.html" class="card">
+                            <img src="./images/banner-03.jpg" alt="配件" class="card-top-img w-100">
+                            <div class="card-body bg-dark">
+                                <h4 class="card-title text-white text-center m-0 p-0">配件</h4>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 產品分類/end -->
+
+    <!-- 熱門產品/start -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <h2>熱門商品</h2>
+            </div>
+            <!-- 商品一 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-01.jpg" alt="LTG-BY-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">LTG-BY-0001</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">
+                            <small class="text-secondary mr-2">
+                                <del>NT$&nbsp;600</del>
+                            </small>
+                            NT$&nbsp;500
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品二 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-02.jpg" alt="TG-B-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">TG-B-0001</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品三 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-03.jpg" alt="LTG-B-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">LTG-B-0001</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品四 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-04.jpg" alt="G-B-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">G-B-0001</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品五 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-05.jpg" alt="G-B-0002" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">G-B-0002</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品六 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-06.jpg" alt="TU-BY-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">TU-BY-0001</h4>
+                        <p class="card-text card-text-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品七 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-07.jpg" alt="MG-GO-0002" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">MG-GO-0002</h4>
+                        <p class="card-text card-text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品八 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-2">
+                <div class="card mb-3" href="#">
+                    <img src="./images/product/product-08.jpg" alt="LG-GP-0001" class="w-100">
+                    <div class="card-body">
+                        <h4 class="card-title">LG-GP-0001</h4>
+                        <p class="card-text card-text-content">lorem8</p>
+                        <h5 class="card-text text-danger">NT$&nbsp;500</h5>
+                        </h5>
+                        <a href="product.html" class="btn btn-outline-secondary btn-block">查看商品</a>
+                        <a href="cart.html" class="btn btn-outline-primary btn-block">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 熱門產品/end -->
+
+    <!-- 關於Fasure/start -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <h2>關於Fasure</h2>
+                <div class="col-12">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ipsum corporis ducimus totam dolor, veniam perferendis qui quam nihil fugiat, inventore adipisci dolores molestiae molestias eos illum sunt quas velit iure deleniti beatae. Omnis, quis incidunt! Earum praesentium optio reprehenderit voluptatibus odio culpa accusamus repudiandae eligendi, id, nam atque ducimus quo modi blanditiis illum quidem. Molestias quos non tenetur fugiat, neque necessitatibus recusandae magnam deserunt doloribus iure ipsam tempora quo tempore quidem quas ullam, quae rerum adipisci reprehenderit? Ipsam quis eum, magni exercitationem quaerat esse. Est at, aut eius velit eaque non aperiam sit, dignissimos, nobis repellendus veritatis nostrum quisquam.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 關於Fasure/end -->
+
+    <!-- google map/start -->
+    <section class="container-fluid mt-5">
+        <div class="row">
+            <!-- map自定義css設定高度、寬度 -->
+            <div class="embed-responsive map">
+                <iframe class="embed-responsive-item"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14460.026539649345!2d121.55577466977536!3d25.033848900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx!5e0!3m2!1szh-TW!2stw!4v1582432419561!5m2!1szh-TW!2stw">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- google map/end -->
+
+    <!-- 頁腳/start -->
+    <footer class="bg-dark">
+        <div class="container pt-3">
+            <div class="row">
+                <!-- 選單連結/start -->
+                <div class="col-12 col-md-6 my-3">
+                    <ul class="footer-menu">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於Fasure</a></li>
+                        <li><a href="shop.html">商品商城</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="login.html">登入</a></li>
+                        <li><a href="cart.html">購物車</a></li>
+                        <li><a href="checkout.html">結帳</a></li>
+                    </ul>
+                </div>
+                <!-- 選單連結/end -->
+
+                <!-- 訂閱/start -->
+                <div class="col-12 col-md-6 my-3">
+                    <h6 class="text-white">留下E-mail，訂閱Fasure，可搶先獲得最新的資訊喔！</h6>
+                    <form action="">
+                        <input type="email" id="subscription" class="form-control mt-2 mb-2"
+                            aria-describedby="subscription" placeholder="請輸入email">
+                        <button type="submit" class="btn btn-primary float-right send-btn">傳送</button>
+                    </form>
+                </div>
+                <!-- 訂閱/end -->
+
+                <!-- 版權所有/start -->
+                <div class="col-12 mt-3">
+                    <p class="text-white text-center"> &copy; Copyright 2020 Fasure</p>
+                </div>
+                <!-- 版權所有/end -->
+            </div>
+        </div>
+    </footer>
+    <!-- 頁腳/end -->
+</body>
+
+</html>
