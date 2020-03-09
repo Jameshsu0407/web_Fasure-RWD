@@ -81,7 +81,7 @@
                             <p class="d-inline-block">顯示 21 筆結果中的 1-9 筆</p>
                             <form action="" class="d-inline-block float-right">
                                 <select name="" id="PrroductSelect">
-                                    <option  selected disabled>排列順序</option>
+                                    <option selected disabled>排列順序</option>
                                     <option>依熱銷度</option>
                                     <option>依價格排序：低到高</option>
                                     <option>依價格排序：高到低</option>
@@ -385,7 +385,10 @@
     </script>
     <script src="./js/slick.js"></script>
     <script>
-        $('.slick').slick();
+        $('.slick').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
     </script>
 </body>
 
