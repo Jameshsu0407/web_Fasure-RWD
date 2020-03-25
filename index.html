@@ -19,7 +19,7 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body id="top">
     <!-- header/start -->
     <header class="container">
         <!-- navbar定義導覽列的基礎樣式；navbar-expand-lg導覽列的斷點為lg；navbar-light文字淺灰色 -->
@@ -382,6 +382,7 @@
     <!-- 頁腳/end -->
     <!-- back to top -->
     <a onclick="topFunction()" id="myBtn"><i class="fas fa-chevron-circle-up"></i></a>
+    <!-- <a data-goto-target="#top" data-goto-duration="1500" id="back-to-top"><i class="fas fa-chevron-circle-up"></i></a> -->
 
     <!-- back to top.js -->
     <script>
@@ -402,7 +403,8 @@
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
@@ -411,6 +413,10 @@
      <script>
        AOS.init();
      </script>
+    <!-- jquery CDN
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    goToElement
+    <script src="https://jameshsu0407.github.io/GoToElement/GoToElement.js"></script> -->
 </body>
 
 </html>
