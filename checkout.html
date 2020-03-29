@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- js文件載入 -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -82,7 +83,7 @@
                 <!-- 結帳訊息/end -->
 
                 <!-- 帳單資訊/start -->
-                <div class="col-12 col-md-6 mb-3">
+                <div class="col-12 col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
                     <h2>帳單資訊</h2>
                     <form action="">
                         <div class="form-row">
@@ -137,7 +138,7 @@
                 <!-- 帳單資訊/end -->
 
                 <!-- 您的訂單/start -->
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" data-aos="fade-left" data-aos-duration="1000">
                     <h2>您的訂單</h2>
                     <div class="table-responsive-sm">
                         <!-- table-striped使奇數行的tr具有背景顏色 -->
@@ -260,6 +261,11 @@
             // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+    </script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
